@@ -23,7 +23,6 @@ new Swiper(".slider1", {
   pagination: {
     el: ".swiper-pagination",
     clickable: true,
-    dynamicBullets: true,
   },
   initialSlide: 1,
 });
@@ -35,26 +34,60 @@ new Swiper(".slider2", {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
   },
+  breakpoints: {
+    320: {
+      slidesPerView: 4,
+    },
+    1560: {
+      slidesPerView: 5.5,
+    },
+  },
 });
 new Swiper(".slider3", {
   pagination: {
     el: ".swiper-pagination-slider3",
     clickable: true,
-    dynamicBullets: true,
+  },
+});
+new Swiper(".slider4", {
+  pagination: {
+    el: ".swiper-pagination-slider4",
+    clickable: true,
+  },
+  breakpoints: {
+    320: {
+      slidesPerView: 1.149,
+    },
+    1560: {
+      slidesPerView: 1.48,
+    },
+  },
+});
+new Swiper(".slider5", {
+  slidesPerView: 3,
+  pagination: {
+    el: ".swiper-pagination-slider5",
+    clickable: true,
+  },
+  320: {
+  spaceBetween: 30,
+  },
+  1560: {
+  spaceBetween: 50,
   },
 });
 
-$(".form_button_fade").click(function () {
+$(".form_button_fade,.footer_main_questions_link").click(function () {
   $(".form_body").fadeIn();
   $("html").addClass("lock");
 });
 $(document).mouseup(function (e) {
-  var popup = $('.form_content');
+  var popup = $(".form_content");
   if (e.target != popup[0] && popup.has(e.target).length === 0) {
-    $('.form_body').fadeOut();
+    $(".form_body").fadeOut();
     $("html").removeClass("lock");
   }
-})
+});
 
 $(document).ready(function () {
   $(".header_burger_desktop").click(function (event) {
@@ -63,4 +96,4 @@ $(document).ready(function () {
   });
 });
 
-$(".form_inputs_tel").mask("+7(999)999-99-99");
+$(".form_inputs_tel,.service_form_tel").mask("+7(999)999-99-99");
