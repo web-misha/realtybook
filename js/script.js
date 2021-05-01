@@ -30,12 +30,11 @@ new Swiper(".slider2", {
   slidesPerView: 5.5,
   slideToClickedSlide: true,
   initialSlide: 0,
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
   breakpoints: {
     320: {
+      slidesPerView: 3,
+    },
+    767: {
       slidesPerView: 4,
     },
     1560: {
@@ -56,6 +55,14 @@ new Swiper(".slider4", {
   },
   breakpoints: {
     320: {
+      slidesPerView: 1,
+      spaceBetween: 0,
+    },
+    767: {
+      slidesPerView: 1.3,
+      spaceBetween: 30,
+    },
+    1100: {
       slidesPerView: 1.149,
     },
     1560: {
@@ -69,11 +76,21 @@ new Swiper(".slider5", {
     el: ".swiper-pagination-slider5",
     clickable: true,
   },
-  320: {
-  spaceBetween: 30,
-  },
-  1560: {
-  spaceBetween: 50,
+  breakpoints: {
+    320: {
+      spaceBetween: 20,
+      slidesPerView: 2,
+    },
+    768: {
+      spaceBetween: 50,
+      slidesPerView: 3,
+    },
+    1100: {
+      spaceBetween: 0,
+    },
+    1560: {
+      spaceBetween: 0,
+    }
   },
 });
 
